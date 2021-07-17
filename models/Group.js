@@ -10,6 +10,10 @@ Group.init(
             primaryKey: true,
             autoIncrement: true
         },
+        group_name: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
