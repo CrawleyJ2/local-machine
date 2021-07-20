@@ -32,10 +32,7 @@ User.init(
         },
         location: {
             type: DataTypes.STRING,
-            references: {
-                model: 'location',
-                key: 'name'
-            }
+            allowNull: false
         }
     },
     {
