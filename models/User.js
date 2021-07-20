@@ -29,6 +29,13 @@ User.init(
             validate: {
                 len: [4]
             }
+        },
+        location: {
+            type: DataTypes.STRING,
+            references: {
+                model: 'location',
+                key: 'name'
+            }
         }
     },
     {

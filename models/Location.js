@@ -10,6 +10,13 @@ Location.init (
         }
     },
     {
+        location_name: {
+            type: DataTypes.STRING,
+            allownull: false,
+            unique: true
+        }
+    },
+    {
         sequelize,
         freezeTableName: true,
         underscored: true,
