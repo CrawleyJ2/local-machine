@@ -1,8 +1,27 @@
 body {
+    margin-top: 20px;
     background: #a4ccc1;
 }
 
+h1 {
+    color: #39553f;
+}
+
+h1 a {
+    color: #d29162;
+    text-align: center;
+}
+
+a {
+    text-align: center;
+    color: #d29162;
+}
+
 h2 {
+    color: #d29162;
+}
+
+h3 {
     color: #d29162;
 }
 
