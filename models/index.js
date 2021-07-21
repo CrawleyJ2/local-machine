@@ -2,22 +2,22 @@ const User = require ('./User');
 const Post = require ('./Post');
 const Group = require ('./Group');
 const Comment = require ('./Comment');
-const Location = require ('./Location');
+//const Location = require ('./Location');
 
 // Model relationships
 
 // User belongs to one location
-User.belongsTo(Location, {
-    foreignKey: 'location_id',
-})
+// User.belongsTo(Location, {
+//     foreignKey: 'location_id',
+// })
 // Location can have many users
-Location.hasMany(User, {
-
-})
+// Location.hasMany(User, {
+//     foreignKey: ''
+// })
 // Location can have many groups
-Location.hasMany(Group, {
+// Location.hasMany(Group, {
 
-})
+// })
 // User has many posts
 User.hasMany(Post, {
     foreignKey: 'user_id'
@@ -33,9 +33,9 @@ User.belongsToMany(Post, {
     foreignKey: 'user_id'
 })
 // User belongs to group(s)
-User.belongsToMany(Group, {
+// User.belongsToMany(Group, {
     
-})
+// })
 // User has many Comments
 User.hasMany(Comment, {
   foreignKey: 'user_id',
@@ -46,7 +46,7 @@ Post.hasMany(Comment, {
     foreignKey: 'post_id'
   });
 // Group has many posts
-Group.hasMany(Post, {
+//Group.hasMany(Post, {
 
-})
-module.exports = { User, Post, Group, Comment, Location };
+//})
+module.exports = { User, Post, Group, Comment };
