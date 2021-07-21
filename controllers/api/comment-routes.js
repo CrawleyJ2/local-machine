@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const router = require('express').Router();
 const { Comment } = require('../../models');
 
@@ -45,4 +43,3 @@ router.delete('/:id', (req, res) => {
 });
 
 module.exports = router;
->>>>>>> 5bde6d2b6d88b3093a2ccf52ae5004bd33d8575f
