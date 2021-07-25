@@ -15,20 +15,20 @@
 
 <div class="container">
     <div id="login-row" class="row justify-content-center align-items-center">
-        <form action="/login" method="post">
+        <form id="login-form" action="/login" method="post">
             <div>
-                <label for="username-login">Username:</label>
-                <input type="text" name="username"/>
+                <label for="email-login">Username:</label>
+                <input id="email-login" type="text" name="username"/>
             </div>
             <div>
                 <label for="password-login">Password:</label>
-                <input type="password" name="password"/>
+                <input id="password-login" type="password" name="password"/>
             </div>
             <div>
                 <input type="submit" value="Log In"/>
             </div>
         </form>
-        <form action="/signup" method="post">
+        <form id="signup-form" action="/signup" method="post">
             <div>
                 <label for="username-signup">Username:</label>
                 <input type="text" name="username" id="username-signup"/>
@@ -52,7 +52,7 @@
     </div>
 </div>
 
-<script src="/javascript/logout.js"></script>
+<script src="/javascript/login.js"></script>
 
 
 

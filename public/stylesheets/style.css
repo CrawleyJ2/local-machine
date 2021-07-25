@@ -1,3 +1,12 @@
+a {
+    text-align: center;
+    color: #d29162;
+}
+
+h4 {
+    color: #39553f;
+}
+
 body {
     margin-top: 20px;
     background: #a4ccc1;
@@ -9,28 +18,34 @@ h1 {
     text-align: center;
 }
 
-a {
-    text-align: center;
-    color: #d29162;
-}
 
 h2 {
     color: #d29162;
+    text-align: center;
+
 }
 
 h3 {
     color: #d29162;
+    text-align: center;
 }
 
-h4 {
-    color: #39553f;
-}
 
 .btn {
     background-color: #d29162;
     color: #39553f;
 }
 
-.form-control {
-    align-items: center;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+span {
+    text-align: center;
+}
+
+.btn1 {
+     width: 260px;
 }
