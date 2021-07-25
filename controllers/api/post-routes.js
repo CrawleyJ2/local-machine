@@ -1,29 +1,17 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Post, User, Comment, Vote, Group } = require('../../models');
-const withAuth = require('../../utils/auth');
+const { Post, User, Comment, Group } = require('../../models');
+//const withAuth = require('../../utils/auth');
 
 // get all posts
-router.get("/", (req, res) => {
+router.get('/', (req, res) => {
     Post.findAll({
-    attributes: ["id", "title", "content", "created_at"],
+    attributes: ['id', 'title', 'content', 'created_at'],
     include: [
         {
-        model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
-        include: {
             model: User,
-            attributes: ["username"],
-        },
-        },
-        {
-        model: User,
-        attributes: ["username"],
-        },
-        {
-        model: Group,
-        attributes:["group_name"],
-    },
+            attributes: ['username']
+        }
     ],
     })
     .then((dbPostData) => res.json(dbPostData))
@@ -39,21 +27,13 @@ router.get("/:id", (req, res) => {
     where: {
         id: req.params.id,
     },
-    attributes: ["id", "title", "content", "created_at", "group_id"],
+    attributes: ["id", "title", "username", "group_id"],
     include: [
         {
-        model: Comment,
-        attributes: ["id", "comment_text", "post_id", "user_id", "group_id", "created_at"],
-        include: {
             model: User,
-            attributes: ["username"],
-        },
-        },
-        {
-        model: User,
-        attributes: ["username"],
-        },
-    ],
+            attributes: ["username"]
+        }
+    ]
     })
 
     .then((dbPostData) => {
@@ -70,11 +50,12 @@ router.get("/:id", (req, res) => {
 });
 
 // create a Post
-router.post("/", withAuth, (req, res) => {
+router.post("/", (req, res) => {
     Post.create({
     title: req.body.title,
     content: req.body.content,
-    user_id: req.session.user_id,
+    user_id: req.body.user_id,
+    group_id: req.body.group_id
     })
     .then((dbPostData) => res.json(dbPostData))
     .catch((err) => {
@@ -85,7 +66,7 @@ router.post("/", withAuth, (req, res) => {
 
 
 // update post
-router.put("/:id", withAuth, (req, res) => {
+router.put("/:id", (req, res) => {
     Post.update(
     {
         title: req.body.title,
@@ -111,7 +92,7 @@ router.put("/:id", withAuth, (req, res) => {
 });
 
 // delete post
-router.delete("/:id", withAuth, (req, res) => {
+router.delete("/:id", (req, res) => {
     Post.destroy({
     where: {
         id: req.params.id,
