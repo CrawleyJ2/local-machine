@@ -3,11 +3,8 @@
     background: #a4ccc1;
 }
 
-h1 {
-    color: #39553f;
-}
 
-h1 a {
+h1 {
     color: #d29162;
     text-align: center;
 }
@@ -68,9 +65,11 @@ h3 {
     margin-left: auto;
     margin-right: auto;
 }
+
 span {
     text-align: center;
 }
- .btn1 {
+
+.btn1 {
      width: 260px;
 }
