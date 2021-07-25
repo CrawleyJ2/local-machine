@@ -4,7 +4,27 @@ const router = require('express').Router();
 
 router.get('/', (req, res) => {
   console.log(req.session);
-  res.render('login');
+  Post.findAll({
+    attributes: [
+      'id',
+      'title',
+      'created_at'
+    ],
+    include: {
+      model: User,
+      attributes: ['username']
+    }
+  })
+  .then(dbPostData => {
+    const posts = dbPostData.map(post => post.get({ plain: true }))
+    res.render('login',
+      posts
+    );
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 router.get('/login', (req, res) => {
