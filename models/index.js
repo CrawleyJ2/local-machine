@@ -2,51 +2,58 @@ const User = require ('./User');
 const Post = require ('./Post');
 const Group = require ('./Group');
 const Comment = require ('./Comment');
-//const Location = require ('./Location');
 
-// Model relationships
+// Model associations
 
-// User belongs to one location
-// User.belongsTo(Location, {
-//     foreignKey: 'location_id',
-// })
-// Location can have many users
-// Location.hasMany(User, {
-//     foreignKey: ''
-// })
-// Location can have many groups
-// Location.hasMany(Group, {
+// User has many groups
 
-// })
+// User belongs to many groups
+
 // User has many posts
 User.hasMany(Post, {
     foreignKey: 'user_id'
 });
-// Posts belongs to User
-Post.belongsTo(User, {
-    foreignKey: 'user_id',
-    onDelete: 'SET NULL'
-});
-// User belongs to post through comments
+// User belongs to many post through comments
 User.belongsToMany(Post, {
     through: Comment,
+    as: 'commented_posts',
     foreignKey: 'user_id'
-})
-// User belongs to group(s)
-// User.belongsToMany(Group, {
-    
-// })
-// User has many Comments
-User.hasMany(Comment, {
-  foreignKey: 'user_id',
-  onDelete: 'SET NULL'
 });
-// Post has many Comments
+// User has many comments
+User.hasMany(Comment, {
+    foreignKey: 'user_id'
+});
+// Group belongs to user
+Group.belongsTo(User, {
+    foreignKey: 'user_id'
+});
+// Group has many posts
+
+// Group has many comments
+
+// Post belongs to user 
+Post.belongsTo(User, {
+    foreignKey: 'user_id'
+});
+// Post has many comments
 Post.hasMany(Comment, {
     foreignKey: 'post_id'
-  });
-// Group has many posts
-//Group.hasMany(Post, {
+});
+// Post belong to many user through comments
+Post.belongsToMany(User, {
+    through: Comment,
+    as: 'commented_posts',
+    foreignKey: 'post_id'
+});
+// Comment belongs to user 
+Comment.belongsTo(User, {
+    foreignKey: 'user_id'
+});
+// Comment belongs to post
+Comment.belongsTo(Post, {
+    foreignKey: 'post_id'
+});
+// Comment belongs to group 
 
-//})
+
 module.exports = { User, Post, Group, Comment };

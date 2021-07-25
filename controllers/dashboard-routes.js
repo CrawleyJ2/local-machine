@@ -11,7 +11,6 @@ router.get('/', (req, res) => {
         },
         attributes: [
             'id',
-            'post_url',
             'title'
         ],
         include: [
@@ -31,7 +30,7 @@ router.get('/', (req, res) => {
     })
     .then(dbPostData => {
         const posts = dbPostData.map(post => post.get({ plain: true }));
-        res.render('dashbaord', { posts });
+        res.render('dashboard', { posts });
     })
     .catch(err => {
         console.log(err);
@@ -43,8 +42,7 @@ router.get('/edit/:id', (req, res) => {
     Post.findByPk(req.params.id, {
         attributes: [
             'id',
-            'post_url',
-            'title',
+            'title'
         ],
         includ: [
             {
