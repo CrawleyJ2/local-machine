@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
-const { Group, User } = require('../../models');
+const { Group, User, Comment } = require('../../models');
 
 router.get('/', (req, res) => {
     Group.findAll({
@@ -8,20 +8,20 @@ router.get('/', (req, res) => {
             'id',
             'group_name',
         ],
-        include: [
-            {
-                model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id'],
-                include: {
-                    model: User,
-                    attributes: ['username']
-                }
-            },
-            {
-                model: User,
-                attributes: ['username']
-            }
-        ]
+        // include: [
+        //     {
+        //         model: Comment,
+        //         attributes: ['id', 'comment_text', 'post_id', 'user_id'],
+        //         include: {
+        //             model: User,
+        //             attributes: ['username']
+        //         }
+        //     },
+        //     {
+        //         model: User,
+        //         attributes: ['username']
+        //     }
+        // ]
     })
     .then(dbGroupData => res.json(dbGroupData))
     .catch(err => {
@@ -36,7 +36,13 @@ router.get('/:id', (req, res) => {
             id: req.params.id
         }
     })
-    .then(dbGroupData => res.json(dbGroupData))
+    .then(dbGroupData => {
+        if (!dbGroupData) {
+            res.status(404).json({ message: 'No group found by this id'});
+            return;
+        }
+        res.json(dbGroupData);
+    })
     .catch(err => {
         console.log(err);
         res.status(500).json(err);

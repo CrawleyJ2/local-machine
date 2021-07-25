@@ -14,14 +14,22 @@ Group.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        user_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: 'user',
-                key: 'id'
-            }
-        }
+        // user_id: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     references: {
+        //         model: 'user',
+        //         key: 'id'
+        //     }
+        // },
+        // group_location: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
+        //     references: {
+        //         model: 'user',
+        //         key: 'location'
+        //     }
+        // }
     },
     {
         sequelize,
