@@ -1,4 +1,4 @@
-body {
+/* body {
     margin-top: 20px;
     background: #a4ccc1;
 }
@@ -32,4 +32,45 @@ h4 {
 .btn {
     background-color: #39553f;
     color: #d29162;
+} */
+
+body {
+    margin-top: 20px;
+    background: #a4ccc1;
+}
+
+
+h1 {
+    color: #d29162;
+    text-align: center;
+}
+
+
+h2 {
+    color: #d29162;
+    text-align: center;
+
+}
+
+h3 {
+    color: #d29162;
+    text-align: center;
+}
+
+
+.btn {
+    background-color: #d29162;
+    color: #39553f;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+span {
+    text-align: center;
+}
+ .btn1 {
+     width: 260px;
 }
