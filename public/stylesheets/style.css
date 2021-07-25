@@ -3,11 +3,8 @@ body {
     background: #a4ccc1;
 }
 
-h1 {
-    color: #39553f;
-}
 
-h1 a {
+h1 {
     color: #d29162;
     text-align: center;
 }
@@ -30,6 +27,10 @@ h4 {
 }
 
 .btn {
-    background-color: #39553f;
-    color: #d29162;
+    background-color: #d29162;
+    color: #39553f;
+}
+
+.form-control {
+    align-items: center;
 }

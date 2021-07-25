@@ -23,10 +23,10 @@ User.belongsToMany(Post, {
 User.hasMany(Comment, {
     foreignKey: 'user_id'
 });
-// Group belongs to location 
-
-// Group belongs to user 
-
+// Group belongs to user
+Group.belongsTo(User, {
+    foreignKey: 'user_id'
+});
 // Group has many posts
 
 // Group has many comments

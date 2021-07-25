@@ -28,8 +28,8 @@ router.get('/:id', (req, res) => {
         model: Comment,
         attributes: ['id', 'comment_text', 'created_at'],
         include: {
-            model: Post,
-            attributes: ['title']
+          model: Post,
+          attributes: ['title']
         }
       }
     ]
@@ -105,21 +105,18 @@ router.post('/login', (req, res) => {
     });
 });
   
-//   // logout route
-//   router.post("/logout", (req, res) => {
-//     if (req.session.loggedIn) {
-//       req.session.destroy(() => {
-//         res.status(204).end();
-//       });
-//     } else {
-//       res.status(404).end();
-//     }
-//   });
+// logout route
+router.post("/logout", (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
 
-  router.put('/:id', (req, res) => {
-  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
-
-  // pass in req.body instead to only update what's passed through
+router.put('/:id', (req, res) => {
   User.update(req.body, {
     individualHooks: true,
     where: {

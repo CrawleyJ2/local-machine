@@ -22,13 +22,11 @@ Group.init(
         //         key: 'id'
         //     }
         // },
-        // group_location: {
-        //     type: DataTypes.STRING,
+        // group_members: {
+        //     type: DataTypes.ARRAY,
         //     allowNull: false,
-        //     references: {
-        //         model: 'user',
-        //         key: 'location'
-        //     }
+
+            
         // }
     },
     {
