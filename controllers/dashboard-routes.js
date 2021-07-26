@@ -11,7 +11,6 @@ router.get('/', (req, res) => {
         },
         attributes: [
             'id',
-            'post_url',
             'title'
         ],
         include: [
@@ -43,8 +42,7 @@ router.get('/edit/:id', (req, res) => {
     Post.findByPk(req.params.id, {
         attributes: [
             'id',
-            'post_url',
-            'title',
+            'title'
         ],
         includ: [
             {

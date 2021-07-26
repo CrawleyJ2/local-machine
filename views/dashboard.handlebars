@@ -13,6 +13,7 @@
       <h1>Local-Machine</h1>
   </div>
 <section class="">
+<div class="d-flex justify-content-center">
   <img src="images/blank-profile-picture.png" class="rounded-circle img-thumbnail mb-2 profileimg center" width="100" height="100"
     id="profile-picture">
   <h3>{{Username}}</h3>
@@ -25,9 +26,10 @@
       <span>{{location}}</span>
   </br>
 </div>
-  <a class="btn btn-primary mt-3 mb-2 center btn1" href="/dashboard/account-settings/" role="button">Account Settings</a>
+  <a class="btn btn-primary mt-3 mb-5 center btn1" href="/dashboard/account-settings/" role="button">Account Settings</a>
 </section>
-<div class="col-sm-4 center">
+<div class="create-post d-flex justify-content-left">
+<div class="col-md-9 center">
 <section>
   <h2>Create New Post</h2>
   <form class="new-post-form forms">
@@ -43,6 +45,9 @@
   </form>
 </section>
 </div>
+</div>
+
+<div class="comm-groups d-flex justify-content-end">
 <div class="card w-50 center">
   <div class="card-body">
     <h5 class="card-title">Community Groups</h5>
@@ -51,7 +56,9 @@
     <a href="#" class="btn btn-primary">Community Garden</a>
   </div>
 </div>
+</div>
 <!--- {{#if posts.length}} --->
+<div class="group-posts align-baseline">
 <section>
   <h2>Your Posts</h2>
   <ol>
@@ -62,6 +69,8 @@
     {{/each}}
   </ol>
 </section>
+</div>
+</div>
 {{/if}}
 <script src="/javascript/add-post.js"></script>
 <script src="/javascript/account-settings.js"></script>

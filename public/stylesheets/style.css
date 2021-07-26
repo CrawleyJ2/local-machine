@@ -1,3 +1,12 @@
+a {
+    text-align: center;
+    color: #d29162;
+}
+
+h4 {
+    color: #39553f;
+}
+
 body {
     margin-top: 20px;
     background: #a4ccc1;
@@ -9,28 +18,70 @@ h1 {
     text-align: center;
 }
 
-a {
-    text-align: center;
-    color: #d29162;
-}
 
 h2 {
     color: #d29162;
+    text-align: center;
+
 }
 
 h3 {
     color: #d29162;
+    text-align: center;
 }
 
-h4 {
-    color: #39553f;
-}
 
 .btn {
     background-color: #d29162;
     color: #39553f;
 }
 
-.form-control {
-    align-items: center;
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+span {
+    text-align: center;
+}
+
+.btn1 {
+     width: 260px;
+}
+
+.login {
+    color: #364511;
+}
+
+.signin {
+    color: #364511;
+}
+
+.loginform {
+    margin-top: 2em;
+}
+
+.signupform {
+    margin-top: 2em;
+}
+
+.create-post {
+    width: 600px;
+    float: left;
+    height: 300px;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+.comm-groups {
+    width: 500px;
+    float: left;
+    height: 300px;
+    padding-right: 100px;
+    padding-top: 50px;
+}
+
+.group-posts {
+    padding-left: 100px;
 }
