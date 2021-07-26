@@ -9,13 +9,9 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
-<div> 
-  <h1>Local-Machine</h1>
-</div>
-
-<div class="container">
+<div class="container text-center">
     <div id="login-row" class="row justify-content-center align-items-center">
-        <form id="login-form" action="/login" method="post">
+        <form id="login-form" action="/login" method="post" class="login-form">
             <div>
                 <label for="email-login">Username:</label>
                 <input id="email-login" type="text" name="username"/>
@@ -28,7 +24,7 @@
                 <input type="submit" value="Log In"/>
             </div>
         </form>
-        <form id="signup-form" action="/signup" method="post">
+        <form id="signup-form" action="/signup" method="post" class="signup-form">
             <div>
                 <label for="username-signup">Username:</label>
                 <input type="text" name="username" id="username-signup"/>

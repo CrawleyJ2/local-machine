@@ -58,19 +58,24 @@ span {
     color: #364511;
 }
 
-.loginform {
+.login-form {
     margin-top: 2em;
 }
 
-.signupform {
+.signup-form {
     margin-top: 2em;
+}
+
+.card {
+    background-color: #a4ccc1;
+    
 }
 
 .create-post {
     width: 600px;
     float: left;
     height: 300px;
-    padding-left: 100px;
+    padding-left: 70px;
     padding-top: 50px;
 }
 
@@ -78,10 +83,14 @@ span {
     width: 500px;
     float: left;
     height: 300px;
-    padding-right: 100px;
+    padding-right: -50px;
     padding-top: 50px;
 }
 
 .group-posts {
     padding-left: 100px;
+}
+
+.photo-upload {
+    padding-top: 20px;
 }
