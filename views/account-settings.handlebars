@@ -9,58 +9,65 @@
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <section>
-  <a href="/dashboard">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-          class="bi bi-arrow-left-square" viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-              d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
-      </svg>
-  </a>
-  <div>
-  <img src="/images/blank-profile-picture.png" class="rounded-circle img-thumbnail" width="200" height="200"
-      id="profile-picture">
-  <h2>{{user.username}}</h2>
-  </div>
+<h2 class="text-center">Account Settings</h2>
+<a href="/dashboard">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+        class="bi bi-arrow-left-square" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+            d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm11.5 5.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+    </svg>
+</a>
+<div class="text-center">
+    <img src="/images/blank-profile-picture.png" class="rounded-circle img-thumbnail" width="200" height="200"
+    id="profile-picture">
+    <h2 class="text-center">{{user.username}}</h2>
+</div>
 
-  <form class="new-post-form">
-      <div class="mb-3">
-          <input id="user-bio" name="user-bio" type="text" class="form-control form-control-lg">
-          <label for="floatingInput"> Bio </label>
-      </div>
-      <div class="mb-3">
-          <input id="user-location" name="user-location" type="text" class="form-control form-control-sm">
-          <label for="floatingLocation">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-              </svg> Location
-          </label>
-      </div>
-      <div class="mb-3">
-          <input id="user-birthday" name="user-birthday" type="text" class="form-control form-control-sm">
-          <label for="floatingBirthday">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gift-fill"
-              viewBox="0 0 16 16">
-              <path
-                  d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9H2.5z" />
-              </svg> Birthday
-          </label>
-      </div>
-      <button type="submit" class="btn btn-warning mb-3" id="save-profile">Save Profile</button>
-  </form>
+<div class="d-flex justify-content-center">
+    <form class="new-post-form">
+        <div class="justify-content-center">
+            <div class="col-md-12 text-center">
+            <input id="user-bio" name="user-bio" type="text" class="form-control form-control-lg">
+                <label for="floatingInput"> Bio </label>
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+            <input id="user-location" name="user-location" type="text" class="form-control form-control-sm">
+                <label for="floatingLocation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                    </svg> Location
+                </label>
+        </div>
+        <div class="col-md-12 text-center">
+            <input id="user-birthday" name="user-birthday" type="text" class="form-control form-control-sm">
+                <label for="floatingBirthday">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gift-fill"
+                viewBox="0 0 16 16">
+                <path
+                    d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A2.968 2.968 0 0 1 3 2.506V2.5zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43a.522.522 0 0 0 .023.07zM9 3h2.932a.56.56 0 0 0 .023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0V3zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9H2.5z" />
+                </svg> Birthday
+                </label>
+        </div>
+    <div class="text-center">
+    <button type="submit" class="btn btn-warning mb-3" id="save-profile">Save Profile</button>
+    </div>
+    </form>
+</div>
 </section>
-
-<div class="min-h-screen bg-white flex savediv">
+<div class="photo-upload text-center">
+<div class="min-h-screen flex savediv">
   <div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24 rounded-md">
       <div class="mx-auto w-full max-w-sm lg:w-96">
           <div class="mt-8">
               <div>
                   <div class="mt-6 relative">
                       <div class="absolute inset-0 flex items-center" aria-hidden="true">
-                          <div class="w-full border-t border-gray-300"></div>
+                          <div class="w-full border-t border-black-300"></div>
                       </div>
                       <div class="relative flex justify-center text-sm">
-                          <span class=" bg-white text-gray-500">
+                          <span class="text-gray-500">
                               Upload Profile Picture
                           </span>
                       </div>
@@ -80,7 +87,7 @@
                       </div>
                       <div>
                           <button type="submit" id="upload"
-                              class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mb-2">
+                              class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-black bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mb-2">
                               Upload
                           </button>
                       </div>
@@ -89,6 +96,7 @@
           </div>
       </div>
   </div>
+</div>
 </div>
 <script src="/javascript/edit-account.js"></script>
 </html>
