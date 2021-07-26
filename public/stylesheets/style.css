@@ -49,3 +49,39 @@ span {
 .btn1 {
      width: 260px;
 }
+
+.login {
+    color: #364511;
+}
+
+.signin {
+    color: #364511;
+}
+
+.loginform {
+    margin-top: 2em;
+}
+
+.signupform {
+    margin-top: 2em;
+}
+
+.create-post {
+    width: 600px;
+    float: left;
+    height: 300px;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+.comm-groups {
+    width: 500px;
+    float: left;
+    height: 300px;
+    padding-right: 100px;
+    padding-top: 50px;
+}
+
+.group-posts {
+    padding-left: 100px;
+}
